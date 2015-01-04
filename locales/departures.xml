@@ -42,13 +42,12 @@
 			</match>
 			<tag k="operator" v="(.*;|^)TEC[BCHNLX](;.*|$)"/>
 			<match mode="or">
-				<tag k="name:TEC" v="(.*)" match_id="stop_name"/>
-				<tag k="name" v="(.*)" match_id="stop_name"/>
+				<tag k="name:TEC" v="^(.*)$" match_id="stop_name"/>
 			</match>
 		</match>
 		<output>
 			<copy-all/>
-			<tag from_match="stop_name" k="departures" v="http://www.infotec.be/fr-be/medeplacer/horaires/arret?arret={0}"/>
+			<tag from_match="stop_name" k="departures" v="http://www.infotec.be/fr-be/medeplacer/horaires/arret.aspx?arret={0}"/>
 		</output>
 	</translation>
 	<translation>
