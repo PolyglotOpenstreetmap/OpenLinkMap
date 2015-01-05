@@ -10,7 +10,7 @@
 
 	Supported operators:
 	* AT: ÖBB
-	* BE: De Lijn, TEC (SRWT)
+	* BE: De Lijn
 	* DE: Deutsche Bahn, Verkehrsverbund Stuttgart, Stadtwerke Neuss, Stadtbus Eschwege, Nordhessischer Verkehrsverbund, Braunschweiger Verkehrs AG
 	* ES: Titsa
 	* IT: ATAC, AMT Genova
@@ -30,24 +30,6 @@
 		<output>
 			<copy-all/>
 			<tag from_match="stop_ref" k="departures" v="http://mijnlijn.be/{0}"/>
-		</output>
-	</translation>
-	<translation>
-		<name>TEC</name>
-		<description>Timetables for public transport stops operated by "TEC" in Brabant Wallon, Belgium.</description>
-		<match mode="and">
-			<match mode="or">
-				<tag k="highway" v="bus_stop"/>
-		 		<tag k="public_transport" v="platform"/>
-			</match>
-			<tag k="operator" v="(.*;|^)TEC[BCHNLX](;.*|$)"/>
-			<match mode="or">
-				<tag k="name:TEC" v="^(.*)$" match_id="stop_name"/>
-			</match>
-		</match>
-		<output>
-			<copy-all/>
-			<tag from_match="stop_name" k="departures" v="http://www.infotec.be/fr-be/medeplacer/horaires/arret.aspx?arret={0}"/>
 		</output>
 	</translation>
 	<translation>
